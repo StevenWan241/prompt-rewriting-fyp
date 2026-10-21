@@ -1,0 +1,1 @@
+# Rewriting module (pure Python)
