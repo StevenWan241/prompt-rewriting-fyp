@@ -17,7 +17,7 @@ Evaluating Prompt Rewriting Strategies for Reliable LLM-Generated Code: A Protot
 
 ### D1. Topic direction: LLM / prompt rewriting (2026-10-12)
 - **Decision:** do the FYP on AI/LLM prompt rewriting, not a Unity/XR project.
-- **Why:** a web app with LLM API integration, evaluation and measurable results is strong evidence for a software engineering CV. Supervisor later confirmed the idea is suitable (2026-10-18).
+- **Why:** a web app with LLM API integration, evaluation and measurable results is strong evidence for a software engineering CV. Dr. Abbas later confirmed the idea is suitable (2026-10-18).
 - **Status:** Settled.
 
 ### D2. Narrow the scope: define "enhanced" as measurable (2026-10-15)
@@ -58,12 +58,12 @@ Evaluating Prompt Rewriting Strategies for Reliable LLM-Generated Code: A Protot
 - **Status:** Settled.
 
 ### D9. Prototype is a core deliverable, built with Agile practice (2026-10-18 feedback, applied 2026-10-20)
-- **Trigger:** supervisor said the project looked too research-oriented and asked for stronger software design, implementation and Agile practice.
+- **Trigger:** Dr. Abbas said the project looked too research-oriented and asked for stronger software design, implementation and Agile practice.
 - **Decision:**
   - Two-week sprints; user stories and backlog on a GitHub Projects board.
   - One branch per story, merged by pull request.
   - GitHub Actions CI running pytest (back end and rewriting module) and Vitest (React).
-  - Sprint reviews at supervisor meetings; short retrospective in the repo after each sprint.
+  - Sprint reviews at Dr. Abbas meetings; short retrospective in the repo after each sprint.
   - Definition of Done: merged via pull request, tests passing in CI, acceptance criteria shown at the sprint review.
 - **Status:** Settled.
 
@@ -113,7 +113,7 @@ Model training or fine-tuning; Unity or game-engine code; other languages or dom
 - [ ] Test the local model on the laptop (install Ollama, run the 3B model, record tokens per second, check GPU use). Choose the final model size based on the result.
 - [ ] Confirm the temperature value (e.g. 0.2) after the pilot.
 - [ ] Verify every reference (title, authors, year, arXiv number) before submission. They were written from memory.
-- [ ] Ask the supervisor whether the 4-page proposal is acceptable (template suggests 1-2 pages).
+- [ ] Ask the Dr. Abbas whether the 4-page proposal is acceptable (template suggests 1-2 pages).
 - [ ] Update the submission date on the proposal if this is a resubmission.
 - [ ] Confirm the real FYP calendar and adjust the 24-week plan.
 - [ ] Pilot on about 10 tasks to check for a benchmark ceiling effect (contamination).
@@ -124,4 +124,4 @@ Model training or fine-tuning; Unity or game-engine code; other languages or dom
 |---|---|---|
 | v1 | 2026-10-12 | First draft: general "prompt enhancer" tool plus evaluation |
 | v2 | 2026-10-15 | Narrowed to a measurable research question (after lecturer feedback) |
-| v3 | 2026-10-20 | Prototype as core deliverable, Agile method, user stories, metric and prototype-evaluation tables (after supervisor feedback) |
+| v3 | 2026-10-20 | Prototype as core deliverable, Agile method, user stories, metric and prototype-evaluation tables (after Dr. Abbas feedback) |
