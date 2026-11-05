@@ -36,11 +36,14 @@ Evaluating Prompt Rewriting Strategies for Reliable LLM-Generated Code: A Protot
 - **Known risk:** the benchmark may be in the model's training data (contamination). Mitigation: pilot early, use harder or lightly rephrased tasks, state it as a limitation.
 - **Status:** Settled.
 
-### D5. Model: small open model run locally via Ollama (2026-10-15)
+### D5. Model: small open model run locally via Ollama (2026-10-15, speed test added 2026-11-05)
 - **Candidate:** Qwen2.5-Coder 3B (fallback: 1.5B, or a hosted API with a capped budget).
 - **Why:** control, no API cost, repeatable. Laptop has an RTX 3050 laptop GPU, so a 7B model is likely too slow.
 - **Optional:** one hosted-model check on a subset, to see if results transfer.
-- **Status:** Decided but **not yet tested on the laptop** (see open items).
+- **Status:** Decided. The speed test supports keeping the 3B model. Confirm after the pilot measures time per generation including the sandbox.
+- **Speed test (2026-10-24, evidence in docs/ollama-speed-test.md):** about 72 tokens/s on runs 2 and 3. Run 1 was 8 tokens/s (warm-up, cause not confirmed). `ollama ps` showed 100% GPU, 2.2 GB loaded, 4096-token context. Only one short prompt was tested.
+- **Licence (checked 2026-10-24):** Qwen Research License. Non-commercial research use only, and do not redistribute the weights in the repo.
+
 
 ### D6. Three rewriting strategies, deterministic and template-based (2026-10-20)
 - **Strategies:** (1) role and context, (2) few-shot examples, (3) structured specification.
@@ -110,7 +113,7 @@ Model training or fine-tuning; Unity or game-engine code; other languages or dom
 
 ## Open items
 
-- [ ] Test the local model on the laptop (install Ollama, run the 3B model, record tokens per second, check GPU use). Choose the final model size based on the result.
+- [x] Test the local model on the laptop (done 2026-10-24, see D5).
 - [ ] Confirm the temperature value (e.g. 0.2) after the pilot.
 - [ ] Verify every reference (title, authors, year, arXiv number) before submission. They were written from memory.
 - [ ] Ask the Dr. Abbas whether the 4-page proposal is acceptable (template suggests 1-2 pages).
