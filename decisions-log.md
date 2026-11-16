@@ -110,6 +110,16 @@ Model training or fine-tuning; Unity or game-engine code; other languages or dom
 - **Decision:** Python 3.12 for CI, Docker and the proposal, for consistency and library compatibility. A newer Python (3.15.2) is installed locally.
 - **Status:** Settled.
 
+### D17. Sprint 1 scope: US1 and US3 (decided 2026-11-09, logged 2026-11-16)
+- **Decision:** Sprint 1 runs 9 Nov to 22 Nov. Scope is US1 (rewriting module) and US3 (LLM client). US2 moves back to the Backlog.
+- **Why:** US2 is mostly front end, and the timeline puts the front end in Sprints 5-6. US1 and US3 are the code the experiment harness reuses (D10). Re-prioritising at a sprint review is allowed under D11.
+- **Status:** Settled.
+
+### D18. Task selection: seeded random sample (proposed 2026-11-02, logged 2026-11-16)
+- **Decision:** Pilot and final tasks are drawn by seeded random sample (seed 42) from HumanEval and MBPP. Only tasks that cannot be auto-tested are excluded. The seed and any exclusions are recorded in the repository.
+- **Why:** it avoids the objection that tasks were hand-picked.
+- **Status:** Settled.
+
 ## Timeline (assumed 24 weeks; superseded in length by D15, needs re-fitting to about 23 weeks)
 
 | Weeks | Activity |
