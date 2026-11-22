@@ -23,3 +23,12 @@ def test_generate_returns_response_text():
     assert result == "def add(a, b): return a + b"                                  # what the fake reply contained
     assert mock_post.call_args.args[0] == "http://localhost:11434/api/generate"             # the Ollama URL
     assert mock_post.call_args.kwargs["json"] == build_payload("write add(a, b)", seed=3)      # the payload that was sent
+
+def test_generate_uses_a_timeout():
+    fake = MagicMock()
+    fake.json.return_value = {"response": "x"}
+
+    with patch("llm.client.requests.post", return_value=fake) as mock_post:
+        generate("write add(a, b)", seed=3)
+
+    assert mock_post.call_args.kwargs["timeout"] == 60
