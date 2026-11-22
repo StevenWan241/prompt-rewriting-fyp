@@ -120,6 +120,12 @@ Model training or fine-tuning; Unity or game-engine code; other languages or dom
 - **Why:** it avoids the objection that tasks were hand-picked.
 - **Status:** Settled.
 
+### D19. Few-shot examples and MBPP pool (2026-11-22)
+- **Decision:** the few_shot template contains two short examples written by me (subtraction and multiplication), outside the test set as D6 requires. MBPP tasks are drawn from the sanitized test split only; the 7-task prompt split is excluded.
+- **Why:** keeps the rewriting module free of dataset loading (D10).
+- **Limitation:** both examples are simple arithmetic.
+- **Status:** Settled.
+
 ## Timeline (assumed 24 weeks; superseded in length by D15, needs re-fitting to about 23 weeks)
 
 | Weeks | Activity |
