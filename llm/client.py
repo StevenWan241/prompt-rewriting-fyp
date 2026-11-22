@@ -1,4 +1,7 @@
+import requests
+
 MODEL = "qwen2.5-coder:3b"
+OLLAMA_URL = "http://localhost:11434/api/generate"
 
 def build_payload(prompt, seed, temperature=0.2):
     return {
@@ -7,3 +10,8 @@ def build_payload(prompt, seed, temperature=0.2):
         "stream": False,
         "options": {"temperature": temperature, "seed": seed},
     }
+
+def generate(prompt, seed):
+    payload = build_payload(prompt, seed)
+    response = requests.post(OLLAMA_URL, json=payload)
+    return response.json()["response"]
