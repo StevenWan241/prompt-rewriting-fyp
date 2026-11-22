@@ -13,5 +13,5 @@ def build_payload(prompt, seed, temperature=0.2):
 
 def generate(prompt, seed):
     payload = build_payload(prompt, seed)
-    response = requests.post(OLLAMA_URL, json=payload)
+    response = requests.post(OLLAMA_URL, json=payload, timeout=60)
     return response.json()["response"]
